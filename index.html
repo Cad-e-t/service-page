@@ -12,129 +12,267 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #000;
-            background: #fff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.8;
+            color: #e8e9ea;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
             min-height: 100vh;
-            padding: 0;
             margin: 0;
+            padding: 0;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .page-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(15, 23, 42, 0.95);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            backdrop-filter: blur(10px);
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            text-align: center;
+            padding: 6rem 4rem;
         }
 
         .profile-section {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            padding-bottom: 3rem;
         }
 
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 2rem;
+            border: 3px solid #3b82f6;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
         }
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e40af;
-            margin-bottom: 2rem;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6, #2563eb);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 3rem;
             text-align: center;
+            letter-spacing: -1px;
+            line-height: 1.2;
         }
 
         h2 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: #1e40af;
-            margin: 3rem 0 1.5rem 0;
-            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #60a5fa;
+            margin: 4rem 0 2rem 0;
+            text-align: left;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 4px solid #3b82f6;
+            line-height: 1.3;
         }
 
         p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: #000;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            text-align: left;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .intro-text {
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            margin-bottom: 3rem;
             text-align: center;
+            font-weight: 400;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            margin: 1.5rem 0;
-            display: inline-block;
-            text-align: left;
+            margin: 2rem 0 3rem 0;
         }
 
         li {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            color: #000;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: #cbd5e1;
             position: relative;
-            padding-left: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+            font-weight: 300;
+        }
+
+        li:hover {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateX(10px);
         }
 
         li::before {
-            content: "•";
-            color: #1e40af;
+            content: "→";
+            color: #3b82f6;
             font-weight: bold;
+            font-size: 1.2rem;
             position: absolute;
-            left: 0;
+            left: 1rem;
+            top: 1.5rem;
+        }
+
+        li {
+            padding-left: 3rem;
         }
 
         .highlight {
-            margin: 3rem 0;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 16px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
         }
 
         .cta-link {
-            color: #1e40af;
-            text-decoration: underline;
+            color: #60a5fa;
+            text-decoration: none;
             font-weight: 600;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
         }
 
         .cta-link:hover {
-            color: #3b82f6;
+            border-bottom-color: #60a5fa;
+            text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
         }
 
-        .testimonial {
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: #000;
+        .section {
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 16px;
+            border: 1px solid rgba(59, 130, 246, 0.15);
         }
 
         .conditions-section {
-            margin: 3rem 0;
+            margin: 4rem 0;
         }
 
         .delivery-section {
-            margin: 3rem 0;
+            margin: 4rem 0;
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(30, 41, 59, 0.3));
+            border-radius: 16px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .final-cta {
-            margin: 4rem 0;
+            margin: 5rem 0 0 0;
             text-align: center;
+            padding: 4rem;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+            border-radius: 20px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
 
         .final-cta h2 {
-            color: #1e40af;
-            margin-bottom: 1.5rem;
+            color: #60a5fa;
+            margin-bottom: 2rem;
             text-align: center;
+            border: none;
+            padding: 0;
         }
 
         .final-cta p {
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 2rem 1rem;
+                padding: 3rem 2rem;
+            }
+
+            .page-wrapper {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p, li {
+                font-size: 1.1rem;
+            }
+
+            .intro-text {
+                font-size: 1.2rem;
+            }
+
+            .section, .highlight, .delivery-section, .final-cta {
+                padding: 2rem;
+                margin: 3rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 2rem 1.5rem;
             }
 
             h1 {
@@ -142,67 +280,72 @@
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
 
-            p {
+            p, li {
                 font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-section">
-            <img src="https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png" alt="Henry's Profile" class="profile-img">
-        </div>
-
-        <h1>Hi, I'm Henry, welcome to my service page.</h1>
-        
-        <p>Six months ago, I started coding. Since then, I've built automations, AI agents, and full production apps. I've seen first-hand how intelligent automation can turn one person into a company-sized production force.</p>
-        
-        <p>I originally set out to build the "next big thing," but without a specific use case. Then I thought: why not build for the people who actually need it?</p>
-        
-        <h2>Here's what you need to know:</h2>
-        
-        <p>You've seen the AI agent buzz.</p>
-        
-        <p>Agents that handle end-to-end calls, talk to customers, and take care of repetitive work.</p>
-        
-        <p>I might not know the exact problems in your business yet but I do know the possibilities are endless.</p>
-        
-        <div class="highlight">
-            <h2>What you get:</h2>
-            <ul>
-                <li>Custom AI agents built specifically for your workflow.</li>
-                <li>No monthly fees. No cookie-cutter tools.</li>
-                <li>End-to-end intelligent automation for repetitive, information-heavy tasks.</li>
-            </ul>
-        </div>
-        
-        <h2>How to know if something can be automated:</h2>
-        
-        <p>If it's repetitive, information-based, or takes hours to do manually.. it's a candidate.</p>
-        
-        <p>If you're already paying $200+ per month for tools that force you into their workflow, you're likely better off with a custom permanent solution that's fully yours.</p>
-        
-        <div class="delivery-section">
-            <h2>Delivery: 3–7 days.</h2>
-            <p>Your agent will be deployed instantly and can work via chat, embed, or hosted link.</p>
-        </div>
-        
-        <div class="conditions-section">
-            <h2>Conditions:</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/messaging/compose/?recipient=ACoAAF224dsB1WysFdbA5vilIX53oqFwDgaA6tQ&recipients=List%28urn%3Ali%3Afsd_profile%3AACoAAF224dsB1WysFdbA5vilIX53oqFwDgaA6tQ%29" class="cta-link">DM me "AGENT"</a> and I'll review if it can be done for you.</li>
-                <li>You're willing and able to invest $1000 minimum.</li>
-                <li>I'll continue polishing and solving problems for you for free even after delivery.</li>
-            </ul>
-        </div>
-        
-        <div class="final-cta">
-            <h2>Not Ready Yet?</h2>
-            <p>If this feels like too big of a leap right now, no problem just <a href="https://www.linkedin.com/messaging/compose/?recipient=ACoAAF224dsB1WysFdbA5vilIX53oqFwDgaA6tQ&recipients=List%28urn%3Ali%3Afsd_profile%3AACoAAF224dsB1WysFdbA5vilIX53oqFwDgaA6tQ%29" class="cta-link">DM me</a> with any problem you're facing in your business. I'll audit it for free and show you how it could be solved with intelligent automation.</p>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="profile-section">
+                <img src="https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png" alt="Henry's Profile" class="profile-img">
+                <h1>Hi, I'm Henry, welcome to my service page.</h1>
+            </div>
+            
+            <p class="intro-text">Six months ago, I started coding. Since then, I've built automations, AI agents, and full production apps. I've seen first-hand how intelligent automation can turn one person into a company-sized production force.</p>
+            
+            <p>I originally set out to build the "next big thing," but without a specific use case. Then I thought: why not build for the people who actually need it?</p>
+            
+            <div class="section">
+                <h2>Here's what you need to know:</h2>
+                
+                <p>You've seen the AI agent buzz.</p>
+                
+                <p>Agents that handle end-to-end calls, talk to customers, and take care of repetitive work.</p>
+                
+                <p>I might not know the exact problems in your business yet but I do know the possibilities are endless.</p>
+            </div>
+            
+            <div class="highlight">
+                <h2>What you get:</h2>
+                <ul>
+                    <li>Custom AI agents built specifically for your workflow.</li>
+                    <li>No monthly fees. No cookie-cutter tools.</li>
+                    <li>End-to-end intelligent automation for repetitive, information-heavy tasks.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>How to know if something can be automated:</h2>
+                
+                <p>If it's repetitive, information-based, or takes hours to do manually.. it's a candidate.</p>
+                
+                <p>If you're already paying $200+ per month for tools that force you into their workflow, you're likely better off with a custom permanent solution that's fully yours.</p>
+            </div>
+            
+            <div class="delivery-section">
+                <h2>Delivery: 3–7 days.</h2>
+                <p>Your agent will be deployed instantly and can work via chat, embed, or hosted link.</p>
+            </div>
+            
+            <div class="conditions-section">
+                <h2>Conditions:</h2>
+                <ul>
+                    <li><a href="https://www.linkedin.com/messaging/compose/?recipient=ACoAAF224dsB1WysFdbA5vilIX53oqFwDgaA6tQ&recipients=List%28urn%3Ali%3Afsd_profile%3AACoAAF224dsB1WysFdbA5vilIX53oqFwDgaA6tQ%29" class="cta-link">DM me "AGENT"</a> and I'll review if it can be done for you.</li>
+                    <li>You're willing and able to invest $1000 minimum.</li>
+                    <li>I'll continue polishing and solving problems for you for free even after delivery.</li>
+                </ul>
+            </div>
+            
+            <div class="final-cta">
+                <h2>Not Ready Yet?</h2>
+                <p>If this feels like too big of a leap right now, no problem just <a href="https://www.linkedin.com/messaging/compose/?recipient=ACoAAF224dsB1WysFdbA5vilIX53oqFwDgaA6tQ&recipients=List%28urn%3Ali%3Afsd_profile%3AACoAAF224dsB1WysFdbA5vilIX53oqFwDgaA6tQ%29" class="cta-link">DM me</a> with any problem you're facing in your business. I'll audit it for free and show you how it could be solved with intelligent automation.</p>
+            </div>
         </div>
     </div>
 </body>
